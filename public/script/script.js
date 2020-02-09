@@ -19,12 +19,9 @@ $(document).ready(function () {
     db.collection("drugs").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             var data = doc.data();
-            console.log(data);
             var update = Object.assign({id:doc.id}, data);
             drugs.push(update);
-            console.log(update)
         });
-        console.log(drugs);
 
     });
 });

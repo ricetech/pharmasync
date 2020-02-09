@@ -14,7 +14,6 @@ function renderTable() {
             let dataWithID = Object.assign({id:doc.id}, data);
             drugs.push(dataWithID);
         });
-        console.log(drugs);
         let drug;
         for (drug of drugs) {
             let cells = [];
