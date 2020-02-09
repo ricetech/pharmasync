@@ -15,8 +15,8 @@ function renderTable() {
             let cells = [];
             let row = table.insertRow();
             let i;
-            for (i = 0; i < 9, i++;) {
-                cells[i] = row.insertCell(i);
+            for (i = 0; i < 9; i++) {
+                cells[i] = row.insertCell();
             }
             let keys = Object.keys(drug);
             let key;
