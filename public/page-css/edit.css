@@ -1,6 +1,6 @@
 form div, div.form {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 div.form {
@@ -11,6 +11,7 @@ form {
   width:50vw;
   margin: auto;
   text-align: center;
+  padding-bottom: 3em;
 }
 
 label {
