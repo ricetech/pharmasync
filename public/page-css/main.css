@@ -14,3 +14,11 @@ header {
 #logo-sync {
     color: #89CFF0;
 }
+
+#navbar-logo {
+  margin-left: 1.15vw;
+}
+
+#navbar-button {
+  margin-right: 1.15vw;
+}

@@ -11,42 +11,78 @@
 
     <!-- Custom stylesheets -->
     <link rel="stylesheet" type="text/css" href="page-css/main.css">
-    <link rel="stylesheet" type="text/css" href="page-css/pharm-dashboard.css">
+    <link rel="stylesheet" type="text/css" href="page-css/cust-dashboard.css">
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
     <span class="navbar-brand mb-0 h2">
-        <header id="navbar-logo">
+        <header>
           <h2 id="logo-pharma">pharma</h2>
           <h2 id="logo-sync">SYNC</h2>
         </header>
     </span>
-    <button id="navbar-button" class="btn btn-secondary" onclick="signOut()">Log out</button>
+    <button class="btn btn-secondary" onclick="signOut()">Log out</button>
 </nav>
 
+<h1 class="page-header">Rx Lookup</h1>
 
-<h1 class="page-header">Inventory</h1>
-
-<div class="table-container">
-    <table id="pharm-table" class="table table-responsive-lg table-bordered table-hover table-condensed">
-      <thead>
-        <tr> <!-- Headings -->
-            <th>DIN</th>
-            <th>Brand Name</th>
-            <th>Generic Name</th>
-            <th>Type</th>
-            <th>Variant</th>
-            <th>Amount</th>
-            <th>@OTT</th>
-            <th>@TOR</th>
-            <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-
-      </tbody>
-    </table>
+<!-- DIN search bar -->
+<div class="form">
+<form id="din-bar" class="form-inline md-form mr-auto mb-4">
+  <input class="form-control mr-sm-2" type="text" placeholder="DIN" aria-label="Search">
+  <button class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">GO</button>
+</form>
 </div>
+
+<!-- Location & quantity table -->
+<div class="table-container">
+  <table id="cust-table" class="table table-responsive-sm table-bordered table-hover table-condensed">
+    <thead>
+      <tr>
+        <th>Location</th>
+        <th>Quantity</th>
+      </tr>
+
+      <tr>
+        <td>Ottawa</td>
+        <td>id</td>
+      </tr>
+      <tr>
+        <td>Toronto</td>
+        <td>id</td>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="clientName">Full Name</label>
+    <input type="text" class="form-control" id="cust-name">
+  </div>
+
+  <div class="form-group">
+    <label for="hcNumber">Health Card Number</label>
+    <input type="text" class="form-control" id="cust-card">
+  </div>
+
+  <div class="dropdown">
+    <button id="dropdownMenuButton" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Insurance Company
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Manulife</a>
+      <a class="dropdown-item" href="#">Sunlife Financial</a>
+      <a class="dropdown-item" href="#">GreatWest Life</a>
+      <a class="dropdown-item" href="#">Ontario Blue Cross</a>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="policyNumber">Policy Number</label>
+    <input type="text" class="form-control" id="policy-number">
+  </div>
+</form>
 
 <!-- Bootstrap JavaScript -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -69,6 +105,5 @@
 <!-- Custom JavaScript -->
 <script src="script/script.js"></script>
 <script src="script/pharm-dashboard.js"></script>
-
 </body>
 </html>

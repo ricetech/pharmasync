@@ -1,0 +1,18 @@
+div.form {
+  width: 100%;
+}
+
+form {
+  width:50vw;
+  margin: auto;
+  text-align: center;
+}
+
+.table-container {
+  width: 100%;
+}
+.table {
+  width:50vw;
+  margin: auto;
+  text-align: center;
+}
