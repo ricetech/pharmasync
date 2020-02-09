@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>pharmaSYNC - Home</title>
+
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" type="text/css" href="page-css/main.css">
+    <link rel="stylesheet" type="text/css" href="page-css/cust-dashboard.css">
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h2">
+        <header>
+          <h2 id="logo-pharma">pharma</h2>
+          <h2 id="logo-sync">SYNC</h2>
+        </header>
+    </span>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button class="btn btn-primary" role="button" onclick="location.href='pharm-dashboard.html'" id="pharmacy-button">Pharmacy</button>
+      <button class="btn btn-secondary" onclick="signOut()">Log out</button>
+    </div>
+</nav>
+
+<h1 class="page-header">Add New/Edit</h1>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<!-- Firebase -->
+<!-- update the version number as needed -->
+<script src="/__/firebase/7.8.1/firebase-app.js"></script>
+<!-- include only the Firebase features as you need -->
+<script src="/__/firebase/7.8.1/firebase-auth.js"></script>
+<script src="/__/firebase/7.8.0/firebase-firestore.js"></script>
+<!-- initialize the SDK after all desired features are loaded -->
+<script src="/__/firebase/init.js"></script>
+<!-- Custom JavaScript -->
+<script src="script/script.js"></script>
+<script src="script/pharm-dashboard.js"></script>
+</body>
+</html>
