@@ -1,4 +1,9 @@
 function renderTable() {
+    let body = document.querySelector('tbody');
+    while (body.firstChild) {
+        // This will remove all children within tbody which in your case are <tr> elements
+        body.removeChild(body.firstChild);
+    }
     let db = firebase.firestore();
     let drugs = [];
     db.collection("drugs").get().then((querySnapshot) => {
@@ -49,8 +54,13 @@ function renderTable() {
                         break;
                     case "price":
                         index = 8;
+                        break;
+                    default:
+                        index = -1;
                 }
-                cells[index].innerHTML = drug[key];
+                if (index !== -1) {
+                    cells[index].innerHTML = drug[key];
+                }
             }
 
         }
