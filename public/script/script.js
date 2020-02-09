@@ -7,4 +7,5 @@ function signIn() {
 function signOut() {
     // Sign out of Firebase.
     firebase.auth().signOut();
+    window.location.href = 'index.html';
 }
