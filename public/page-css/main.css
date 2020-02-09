@@ -2,6 +2,11 @@ header {
     text-align: center;
 }
 
+.page-header {
+  text-align: center;
+  padding: 2vw;
+}
+
 #logo-pharma, #logo-sync {
     display: inline;
 }
