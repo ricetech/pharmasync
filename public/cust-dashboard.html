@@ -31,10 +31,8 @@
 
 <!-- DIN search bar -->
 <div class="form">
-<form id="din-bar" class="form-inline md-form mr-auto mb-4">
-  <input class="form-control mr-sm-2" type="text" placeholder="DIN" aria-label="Search">
-  <button class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">GO</button>
-</form>
+  <input id="din" class="form-control mr-sm-2" type="text" placeholder="DIN" aria-label="Search">
+  <button id="submit" class="btn btn-outline-success btn-rounded btn-sm my-0" onclick="populateTable()">GO</button>
 </div>
 
 <!-- Location & quantity table -->
@@ -57,6 +55,10 @@
     </thead>
   </table>
 </div>
+<div id="splitter">
+    <h3>Order Prescription</h3>
+</div>
+
 
 <form>
   <div class="form-group">
@@ -69,21 +71,19 @@
     <input type="text" class="form-control" id="cust-card">
   </div>
 
-  <div class="dropdown">
-    <button id="dropdownMenuButton" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Insurance Company
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item">Manulife</a>
-      <a class="dropdown-item">Sunlife Financial</a>
-      <a class="dropdown-item">GreatWest Life</a>
-      <a class="dropdown-item">Ontario Blue Cross</a>
-    </div>
-  </div>
+    <label for="insurance-select">Insurance Company</label>
+        <select class="form-control" id="insurance-select">
+            <option>OHIP</option>
+            <option>Manulife</option>
+            <option>SunLife Financial</option>
+            <option>Ontario Blue Cross</option>
+        </select>
 
-  <div class="form-group">
+
+    <div class="form-group">
     <label for="policy-number">Policy Number</label>
     <input type="text" class="form-control" id="policy-number">
+    <button>Submit</button>
   </div>
   <button type="submit" class="btn btn-primary btn-success" id="submit-button">SUBMIT</button>
 </form>
