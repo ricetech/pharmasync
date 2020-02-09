@@ -1,7 +1,7 @@
 function populateTable() {
     let din = document.getElementById("din").value;
     let db = firebase.firestore();
-    let drug = db.collection("drugs").doc("din");
+    let drug = db.collection("drugs").doc(din);
 
     drug.get().then(function(doc) {
         if (doc.exists) {
@@ -13,6 +13,10 @@ function populateTable() {
         }
     });
     return false;
+}
+
+function formAlert() {
+    alert("Order submitted. Thank you!")
 }
 
 $(document).ready(function () {
