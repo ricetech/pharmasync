@@ -12,15 +12,6 @@
     <!-- Custom stylesheets -->
     <link rel="stylesheet" type="text/css" href="page-css/main.css">
     <link rel="stylesheet" type="text/css" href="page-css/pharm-dashboard.css">
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.8.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.8.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.8.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.8.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.8.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
@@ -30,34 +21,48 @@
           <h2 id="logo-sync">SYNC</h2>
         </header>
     </span>
-    <button class="btn btn-secondary" onclick=signOut()>Log out</button>
+    <button class="btn btn-secondary" onclick="signOut()">Log out</button>
 </nav>
 
 
-  <section>
+<section>
     <table id="pharm-table">
-      <tr> <!-- Headings -->
-        <td>DIN</td>
-        <td>Brand Name</td>
-        <td>Generic Name</td>
-        <td>Type</td>
-        <td>Variant</td>
-        <td>Quantity</td>
-        <td>Price</td>
-        <td>Edit</td>
-      </tr>
+        <tr> <!-- Headings -->
+            <td>DIN</td>
+            <td>Brand Name</td>
+            <td>Generic Name</td>
+            <td>Type</td>
+            <td>Variant</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Edit</td>
+        </tr>
     </table>
-  </section>
+</section>
 
 
 <p id="load">test</p>
 <!-- Bootstrap JavaScript -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<!-- Firebase -->
+<!-- update the version number as needed -->
+<script src="/__/firebase/7.8.1/firebase-app.js"></script>
+<!-- include only the Firebase features as you need -->
+<script src="/__/firebase/7.8.1/firebase-auth.js"></script>
+<script src="/__/firebase/7.8.0/firebase-firestore.js"></script>
+<!-- initialize the SDK after all desired features are loaded -->
+<script src="/__/firebase/init.js"></script>
 <!-- Custom JavaScript -->
 <script src="script/script.js"></script>
+<script src="script/pharm-dashboard.js"></script>
 
 </body>
 </html>
