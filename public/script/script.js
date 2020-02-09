@@ -1,3 +1,16 @@
+const firebase = require("firebase");
+require("firebase/firestore");
+
+
+firebase.initializeApp({
+    apiKey: 'AIzaSyClgFhxIGb2CoY6GsujeNw91yLowX0yl14',
+    authDomain: 'pharmasync-uoh3.firebaseapp.com',
+    projectId: 'pharmasync-uoh3'
+});
+
+var db = firebase.firestore();
+
+
 function signIn() {
     // Sign into Firebase using popup auth & Google as the identity provider.
     var provider = new firebase.auth.GoogleAuthProvider();
