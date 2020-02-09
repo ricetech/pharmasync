@@ -1,8 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-header {
-	text-align: center;
-}
 
 .login {
 	align-items: center;
@@ -15,14 +12,6 @@ header {
 	right: 0;
 	top: 0;
 	bottom: 0;
-}
-
-#logo-pharma, #logo-sync {
-	display: inline;
-}
-
-#logo-sync {
-	color: #89CFF0;
 }
 
 #login-button {
