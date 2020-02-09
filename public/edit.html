@@ -11,7 +11,7 @@
 
     <!-- Custom stylesheets -->
     <link rel="stylesheet" type="text/css" href="page-css/main.css">
-    <link rel="stylesheet" type="text/css" href="page-css/cust-dashboard.css">
+    <link rel="stylesheet" type="text/css" href="page-css/edit.css">
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
@@ -22,13 +22,64 @@
         </header>
     </span>
     <div class="btn-group" role="group" aria-label="Basic example">
-      <button class="btn btn-primary" role="button" onclick="location.href='pharm-dashboard.html'" id="pharmacy-button">Pharmacy</button>
+      <button class="btn btn-primary btn-danger" role="button" onclick="location.href='pharm-dashboard.html'" id="pharmacy-button">Cancel</button>
       <button class="btn btn-secondary" onclick="signOut()">Log out</button>
     </div>
 </nav>
 
 <h1 class="page-header">Add New/Edit</h1>
 
+<!-- DIN fetch bar -->
+<div class="form">
+<form id="din-bar" class="form-inline md-form mr-auto mb-4">
+  <input class="form-control mr-sm-2" type="text" placeholder="DIN" aria-label="Fetch">
+  <button class="btn btn-outline-success btn-rounded btn-sm my-0" type="submit">FETCH</button>
+</form>
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="trade-name">Trade Name</label>
+    <input type="text" class="form-control" id="trade-name">
+  </div>
+
+  <div class="form-group">
+    <label for="generic-name">Generic Name</label>
+    <input type="text" class="form-control" id="generic-name">
+  </div>
+
+  <div class="form-group">
+    <label for="type">Type</label>
+    <input type="text" class="form-control" id="type">
+  </div>
+
+  <div class="form-group">
+    <label for="variant">Variant</label>
+    <input type="text" class="form-control" id="variant">
+  </div>
+
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input type="text" class="form-control" id="amount">
+  </div>
+
+  <div class="form-group">
+    <label for="q-ott">@OTT</label>
+    <input type="text" class="form-control" id="q-ott">
+  </div>
+
+  <div class="form-group">
+    <label for="q-tor">@TOR</label>
+    <input type="text" class="form-control" id="q-tor">
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" class="form-control" id="price">
+  </div>
+
+  <button type="submit" class="btn btn-primary">SUBMIT</button>
+</form>
 
 <!-- Bootstrap JavaScript -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -50,6 +101,6 @@
 <script src="/__/firebase/init.js"></script>
 <!-- Custom JavaScript -->
 <script src="script/script.js"></script>
-<script src="script/pharm-dashboard.js"></script>
+<script src="script/edit.js"></script>
 </body>
 </html>
